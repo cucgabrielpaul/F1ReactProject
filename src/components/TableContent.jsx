@@ -62,6 +62,7 @@ function TableContent() {
   return (
     <tbody>
       <BestTeam props={getBestTeam()}/>
+      
       {drivers.map((element, index) => (
         <Data
           key={element.number}
