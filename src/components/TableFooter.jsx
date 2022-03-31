@@ -1,13 +1,17 @@
-import React from 'react'
+import React from "react";
+import TableFooter from "@mui/material/TableFooter";
+import TableCell from "@mui/material/TableCell";
+import TableRow from "@mui/material/TableRow";
 
-function TableFooter(props) {
-  
+function TabFooter(props) {
   return (
-    <tfoot>
-      <tr>
-        <td colSpan="9">Last update : {props.date}</td>
-      </tr>
-    </tfoot>
-  )
+    <TableFooter>
+      <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+        <TableCell align="right" colSpan="9">
+          Last update :{props.date}
+        </TableCell>
+      </TableRow>
+    </TableFooter>
+  );
 }
-export default TableFooter;
+export default TabFooter;
