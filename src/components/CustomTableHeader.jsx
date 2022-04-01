@@ -4,7 +4,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 
-function TableHeader(props) {
+function CustomTableHeader(props) {
   let { no, flag, pic, driver, team, country, points, increase } = props;
   
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -20,16 +20,16 @@ function TableHeader(props) {
   return (
     <TableHead>
       <TableRow>
-        <StyledTableCell>{no}</StyledTableCell>
-        <StyledTableCell align="right">{flag}</StyledTableCell>
-        <StyledTableCell align="right">{pic}</StyledTableCell>
-        <StyledTableCell align="right">{driver}</StyledTableCell>
-        <StyledTableCell align="right">{team}</StyledTableCell>
-        <StyledTableCell align="right">{country}</StyledTableCell>
-        <StyledTableCell align="right">{points}</StyledTableCell>
-        <StyledTableCell align="right">{increase}</StyledTableCell>
+        <StyledTableCell align="center">{no}</StyledTableCell>
+        <StyledTableCell align="center">{flag}</StyledTableCell>
+        <StyledTableCell align="center">{pic}</StyledTableCell>
+        <StyledTableCell align="left">{driver}</StyledTableCell>
+        <StyledTableCell align="left">{team}</StyledTableCell>
+        <StyledTableCell align="center">{country}</StyledTableCell>
+        <StyledTableCell align="center">{points}</StyledTableCell>
+        <StyledTableCell align="center">{increase}</StyledTableCell>
       </TableRow>
     </TableHead>
   );
 }
-export default TableHeader;
+export default CustomTableHeader;
