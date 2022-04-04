@@ -78,8 +78,9 @@ function TableContent() {
       sx={{
         display: "flex",
         flexDirection: "column",
-        m:"0 auto",
+        m: "0 auto",
         width: "90%",
+        backgroundColor: "#fff5",
       }}
     >
       <CustomCard props={getBestTeam()} />

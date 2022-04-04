@@ -14,6 +14,7 @@ const CustomCard = (props) => {
         flexDirection: "row",
         justifyContent: "space-evenly",
         alignItems: "center",
+        backgroundColor: "#fff5",
       }}
     >
       <CardContent
@@ -34,7 +35,14 @@ const CustomCard = (props) => {
           }}
         />
         <Typography component="h6">First driver</Typography>
-        <Typography component="h6">{firstDriverName}</Typography>
+        <Typography
+          component="h6"
+          sx={{
+            fontWeight: "bold",
+          }}
+        >
+          {firstDriverName}
+        </Typography>
       </CardContent>
 
       <CardContent
@@ -50,11 +58,19 @@ const CustomCard = (props) => {
           component="h6"
           sx={{
             mb: "20px",
+            fontWeight: "bold",
           }}
         >
           {team}
         </Typography>
-        <Typography component="h6">TOTAL SCORE : {totalScore}</Typography>
+        <Typography
+          component="h6"
+          sx={{
+            fontWeight: "bold",
+          }}
+        >
+          TOTAL SCORE : {totalScore}
+        </Typography>
       </CardContent>
 
       <CardContent
@@ -66,6 +82,7 @@ const CustomCard = (props) => {
         }}
       >
         <CardMedia
+          className="makeItOpaque"
           component="img"
           image={secondDriverImg}
           alt={secondDriverName}
@@ -75,7 +92,14 @@ const CustomCard = (props) => {
           }}
         />
         <Typography component="h6">Second driver</Typography>
-        <Typography component="h6">{secondDriverName}</Typography>
+        <Typography
+          component="h6"
+          sx={{
+            fontWeight: "bold",
+          }}
+        >
+          {secondDriverName}
+        </Typography>
       </CardContent>
     </Card>
   );

@@ -1,18 +1,24 @@
-import TinyFlag from "tiny-flag-react";
+import ReactCountryFlag from "react-country-flag"
 import Button from "@mui/material/Button";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 import Box from "@mui/material/Box";
 
 function CustomTableRow(props) {
-  const flagURL = (code) => `https://cdn.jsdelivr.net/npm/react-flagkit@1.0.2/img/SVG/${code}.svg`;
-  const { key, no, pic, name, team, country, points, increase, decrease } = props;
-  console.log(props);
+  const { no, pic, name, team, country, points, increase, decrease } = props;
+
   return (
-    <TableRow key={key}>
+    <TableRow>
       <TableCell align="center">{no}</TableCell>
       <TableCell align="center">
-        <TinyFlag fallbackImageURL={flagURL(country)} />
+        <ReactCountryFlag
+          countryCode={country}
+          style={{
+            width: "65px ",
+            height: "50px ",
+          }}
+          svg
+        ></ReactCountryFlag>
       </TableCell>
       <TableCell align="center">
         <img src={pic} alt={name} height={"80"} width={"80"} />
