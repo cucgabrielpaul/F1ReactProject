@@ -1,4 +1,4 @@
-f1rank.netlify.app
+https://f1rank.netlify.app/
 
   Given an array of objects, where each object contains information about one of the drivers, render a list of cards where each card displays information about the drivers: full name, race number, team, total points, image. The list has to be shown in descending order based on their points.
   
